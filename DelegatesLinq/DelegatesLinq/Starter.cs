@@ -11,8 +11,7 @@ namespace DelegatesLinq
         public static void Start()
         {
             Delegates delegates = new Delegates();
-            Actions actions = new Actions();
-            Console.WriteLine(actions.Result(delegates.MyEvent, 3, 4));
+            Console.WriteLine("Result:" + delegates.Calc());
         }
     }
 }

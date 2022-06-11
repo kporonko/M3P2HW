@@ -52,6 +52,7 @@ namespace Linq
             {
                 Console.WriteLine(contact.Name + ": " + contact.Number);
             }
+
             Console.ReadLine();
         }
 
