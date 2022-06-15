@@ -25,7 +25,7 @@ namespace DelegatesLinq
         public int Sum(int x, int y) => x + y;
 
         /// <summary>
-        /// Method calls the resultive method and create the paramethers we need to push into that method: arrau of delegates, and array of integers. 
+        /// Method calls the resultive method and create the paramethers we need to push into that method: arrau of delegates, and array of integers.
         /// </summary>
         /// <returns>Result of summing.</returns>
         public int Calc()
@@ -34,8 +34,16 @@ namespace DelegatesLinq
 
             Actions actions = new Actions();
 
-            // Call the AskNumbers method to fill the int array and then the Result method.
-            return actions.Result(list, AskNumbers());
+            try
+            {
+                // Call the AskNumbers method to fill the int array and then the Result method.
+                return actions.Result(list, AskNumbers());
+            }
+            catch (Exception)
+            {
+            }
+
+            return 0;
         }
 
         /// <summary>
